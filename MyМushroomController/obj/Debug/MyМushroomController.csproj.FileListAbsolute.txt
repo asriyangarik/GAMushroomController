@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\MyМushroomController.exe.config
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\MyМushroomController.exe
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\MyМushroomController.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.Properties.Resources.resources
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.GenerateResource.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.exe
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.MyController.resources
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\RelayControll.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\RelayControll.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.CopyComplete

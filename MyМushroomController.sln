@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyМushroomController", "MyМushroomController\MyМushroomController.csproj", "{2486B4C6-D23D-4C87-AA26-74D38C83EEAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelayControll", "RelayControll\RelayControll.csproj", "{CD57250D-2A67-4C35-9675-87F9F9E99A31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2486B4C6-D23D-4C87-AA26-74D38C83EEAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2486B4C6-D23D-4C87-AA26-74D38C83EEAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2486B4C6-D23D-4C87-AA26-74D38C83EEAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2486B4C6-D23D-4C87-AA26-74D38C83EEAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD57250D-2A67-4C35-9675-87F9F9E99A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD57250D-2A67-4C35-9675-87F9F9E99A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD57250D-2A67-4C35-9675-87F9F9E99A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD57250D-2A67-4C35-9675-87F9F9E99A31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {130F3B0C-8605-4039-BD13-3DF2089E9802}
+	EndGlobalSection
+EndGlobal

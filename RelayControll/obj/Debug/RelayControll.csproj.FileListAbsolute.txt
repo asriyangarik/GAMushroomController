@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\VisualServise\MyМushroomController\RelayControll\bin\Debug\RelayControll.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\RelayControll\bin\Debug\RelayControll.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController\RelayControll\obj\Debug\RelayControll.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\RelayControll\obj\Debug\RelayControll.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\RelayControll\obj\Debug\RelayControll.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\RelayControll\obj\Debug\RelayControll.pdb
