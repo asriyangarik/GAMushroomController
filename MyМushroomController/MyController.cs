@@ -1,6 +1,7 @@
 ﻿using RelayControll;
 using System;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -10,7 +11,10 @@ namespace MyМushroomController
     public partial class MyController : Form
     {
 
-        string _mySelectedCom;
+
+        string path = @"C:\Program Files (x86)\GAController\Settings.txt";
+        StreamWriter _inFileWriter;
+        FileInfo MySettingsFile;
         SerialPort _myserialPort;
         RelayControllCL _myRelay1;
         RelayControllCL _myRelay2;
@@ -25,13 +29,35 @@ namespace MyМushroomController
 
             RefreshMyComList();
 
+            SettingFileCreater();
+
 
         }
+
+        private async void SettingFileCreater()
+        {
+            MySettingsFile = new FileInfo(path);
+            _inFileWriter = new StreamWriter(path, false);
+            if (MySettingsFile.Exists)     ///////ete fayl@ ka kardal u katarel
+            {
+
+
+
+
+                _inFileWriter.Close();
+            }
+            else                          //////ete chka stexcum enq
+            {
+                MySettingsFile.Create();
+            }
+
+        }
+
         private void RefreshMyComList()
         {
-            _myRelay1 = new RelayControllCL();
-            _myRelay2 = new RelayControllCL();
-            _myRelay3 = new RelayControllCL();
+            
+           
+            
 
 
 
@@ -65,7 +91,7 @@ namespace MyМushroomController
 
         #region ComPort Settings
 
-        private void ConformComBT_Click(object sender, EventArgs e)
+        private async void ConformComBT_Click(object sender, EventArgs e)
         {
            
 
@@ -88,8 +114,7 @@ namespace MyМushroomController
             {
                 IndicatorCOMBT.Visible = true;
 
-                _mySelectedCom = MyComPortsCB.Text;
-                _myserialPort = new SerialPort(_mySelectedCom);
+                _myserialPort = new SerialPort(MyComPortsCB.Text);
                 _myserialPort.BaudRate = Convert.ToInt32(COMBaudRateCB.Text);
                 _myserialPort.Parity = Parity.None;
                 _myserialPort.StopBits = StopBits.One;
@@ -101,6 +126,7 @@ namespace MyМushroomController
                 {
                     _myserialPort.Open();
                     IndicatorCOMBT.BackColor = Color.Green;
+
                 }
                 catch (Exception ex)
                 {
@@ -157,8 +183,8 @@ namespace MyМushroomController
                 MessageBox.Show("Relay Already is connected");
                 return;
             }
-            
 
+            _myRelay1 = new RelayControllCL();
             IndicatorRELAY1BT.Visible = true;
             _reley_1_isConnected = _myRelay1.MyDeviceConnect(RelayList1CB.Text);
             if (!_reley_1_isConnected)
@@ -235,7 +261,7 @@ namespace MyМushroomController
                 MessageBox.Show("Relay Already is connected");
                 return;
             }
-
+            _myRelay2 = new RelayControllCL();
             IndicatorRELAY2BT.Visible = true;
             _reley_2_isConnected = _myRelay2.MyDeviceConnect(RelayList2CB.Text);
             if (!_reley_2_isConnected)
@@ -302,7 +328,7 @@ namespace MyМushroomController
                 MessageBox.Show("Relay Already is connected");
                 return;
             }
-
+            _myRelay3 = new RelayControllCL();
             IndicatorRELAY3BT.Visible = true;
             _reley_3_isConnected = _myRelay3.MyDeviceConnect(RelayList2CB.Text);
             if (!_reley_3_isConnected)
@@ -372,8 +398,78 @@ namespace MyМushroomController
 
         }
 
+        private async void SaveSetTB_Click(object sender, EventArgs e)
+        {
+            string parametr = "";
+            if (!validateSave(out parametr))
+            {
+
+                MessageBox.Show($"There are nothing to Save check the {parametr} parameters","Error");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Save The Settings??", "Question", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            _inFileWriter = new StreamWriter(path, false);
+            await _inFileWriter.WriteLineAsync(DateTime.Now.ToString());
+            await _inFileWriter.WriteLineAsync(_myserialPort.PortName);
+            await _inFileWriter.WriteLineAsync(_myserialPort.BaudRate.ToString());
+            await _inFileWriter.WriteLineAsync(_myserialPort.Parity.ToString());
+            await _inFileWriter.WriteLineAsync(_myserialPort.StopBits.ToString());
+            await _inFileWriter.WriteLineAsync(_myserialPort.DataBits.ToString());
+            await _inFileWriter.WriteLineAsync(_myserialPort.Handshake.ToString());
+
+            if (_reley_1_isConnected)
+            {
+                await _inFileWriter.WriteLineAsync(_myRelay1.MyDeviceInfo());
+            }
+            else if (_reley_2_isConnected)
+            {
+                await _inFileWriter.WriteLineAsync(_myRelay2.MyDeviceInfo());
+            }
+            else if (_reley_3_isConnected)
+            {
+                await _inFileWriter.WriteLineAsync(_myRelay3.MyDeviceInfo());
+            }
 
 
+            MessageBox.Show("Save Complete", "Notification");
+            _inFileWriter.Close();
 
+        }
+
+        private bool validateSave(out string parametrName)
+        {
+            if (_myserialPort == null) 
+            { 
+                parametrName = "SerialPort";
+                return false;
+            }
+
+            else if (_myRelay1 == null)
+            {
+                if (_myRelay2 == null)
+                {
+                    if (_myRelay3 == null)
+                    {
+                        parametrName = "Relays";
+                        return false;
+                    }
+                }
+
+            }
+            parametrName = "";
+            return true;
+        }
+
+        private void SettingBT_Click(object sender, EventArgs e)
+        {
+            SettingsForm MySetting = new SettingsForm(this);
+            MySetting.Show();
+        }
     }
 }
