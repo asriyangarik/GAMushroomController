@@ -18,8 +18,8 @@ namespace RelayControll
         {
             try
             {
-                usb_relay_device_info deviceInfo = RelayDeviceWrapper.usb_relay_device_enumerate();
-                return deviceInfo.ToString();
+               
+                return _mydevice.ToString();
             }
             catch (Exception ex)
             {
