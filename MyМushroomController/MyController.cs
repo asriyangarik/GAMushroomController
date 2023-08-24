@@ -64,7 +64,7 @@ namespace MyМushroomController
             MyComPortsCB.Items.Clear();
 
             var myPorts =  SerialPort.GetPortNames();
-
+            
             foreach (var Port in myPorts)
             {
                 MyComPortsCB.Items.Add(Port);
