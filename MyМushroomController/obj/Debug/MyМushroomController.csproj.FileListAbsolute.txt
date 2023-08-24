@@ -12,3 +12,13 @@ C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\RelayControll.dll
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\RelayControll.pdb
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.CopyComplete
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\DynamicData.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\Splat.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Reactive.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\DynamicData.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\Splat.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Reactive.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Threading.Tasks.Extensions.xml
