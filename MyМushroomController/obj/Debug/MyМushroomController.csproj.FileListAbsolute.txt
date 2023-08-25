@@ -20,5 +20,13 @@ C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\DynamicData.xml
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\Splat.xml
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Reactive.xml
-C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\SQLite\MushroomDB.sqlite
