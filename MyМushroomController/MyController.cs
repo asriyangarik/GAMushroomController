@@ -1,4 +1,5 @@
-﻿using RelayControll;
+﻿using MyМushroomController.DAL;
+using RelayControll;
 using System;
 using System.Drawing;
 using System.IO;
@@ -11,10 +12,6 @@ namespace MyМushroomController
     public partial class MyController : Form
     {
 
-
-        string path = @"C:\Program Files (x86)\GAController\Settings.txt";
-        StreamWriter _inFileWriter;
-        FileInfo MySettingsFile;
         SerialPort _myserialPort;
         RelayControllCL _myRelay1;
         RelayControllCL _myRelay2;
@@ -29,26 +26,17 @@ namespace MyМushroomController
 
             RefreshMyComList();
 
-            SettingFileCreater();
+            SQLiteConnection();
 
 
         }
 
-        private async void SettingFileCreater()
+        private async void SQLiteConnection()
         {
-            MySettingsFile = new FileInfo(path);
-            _inFileWriter = new StreamWriter(path, false);
-            if (MySettingsFile.Exists)     ///////ete fayl@ ka kardal u katarel
+            bool SqlConnect = SQLiteHelper.SqlConnectionTest();
+            if (!SqlConnect)
             {
-
-
-
-
-                _inFileWriter.Close();
-            }
-            else                          //////ete chka stexcum enq
-            {
-                MySettingsFile.Create();
+                MessageBox.Show("Cannot Connect to SQL","Error");
             }
 
         }
@@ -56,11 +44,7 @@ namespace MyМushroomController
         private void RefreshMyComList()
         {
             
-           
-            
-
-
-
+          
             MyComPortsCB.Items.Clear();
 
             var myPorts =  SerialPort.GetPortNames();
@@ -414,31 +398,31 @@ namespace MyМushroomController
                 return;
             }
 
-            _inFileWriter = new StreamWriter(path, false);
-            await _inFileWriter.WriteLineAsync(DateTime.Now.ToString());
-            await _inFileWriter.WriteLineAsync(_myserialPort.PortName);
-            await _inFileWriter.WriteLineAsync(_myserialPort.BaudRate.ToString());
-            await _inFileWriter.WriteLineAsync(_myserialPort.Parity.ToString());
-            await _inFileWriter.WriteLineAsync(_myserialPort.StopBits.ToString());
-            await _inFileWriter.WriteLineAsync(_myserialPort.DataBits.ToString());
-            await _inFileWriter.WriteLineAsync(_myserialPort.Handshake.ToString());
+            //_inFileWriter = new StreamWriter(path, false);
+            //await _inFileWriter.WriteLineAsync(DateTime.Now.ToString());
+            //await _inFileWriter.WriteLineAsync(_myserialPort.PortName);
+            //await _inFileWriter.WriteLineAsync(_myserialPort.BaudRate.ToString());
+            //await _inFileWriter.WriteLineAsync(_myserialPort.Parity.ToString());
+            //await _inFileWriter.WriteLineAsync(_myserialPort.StopBits.ToString());
+            //await _inFileWriter.WriteLineAsync(_myserialPort.DataBits.ToString());
+            //await _inFileWriter.WriteLineAsync(_myserialPort.Handshake.ToString());
 
-            if (_reley_1_isConnected)
-            {
-                await _inFileWriter.WriteLineAsync(_myRelay1.MyDeviceInfo());
-            }
-            else if (_reley_2_isConnected)
-            {
-                await _inFileWriter.WriteLineAsync(_myRelay2.MyDeviceInfo());
-            }
-            else if (_reley_3_isConnected)
-            {
-                await _inFileWriter.WriteLineAsync(_myRelay3.MyDeviceInfo());
-            }
+            //if (_reley_1_isConnected)
+            //{
+            //    await _inFileWriter.WriteLineAsync(_myRelay1.MyDeviceInfo());
+            //}
+            //else if (_reley_2_isConnected)
+            //{
+            //    await _inFileWriter.WriteLineAsync(_myRelay2.MyDeviceInfo());
+            //}
+            //else if (_reley_3_isConnected)
+            //{
+            //    await _inFileWriter.WriteLineAsync(_myRelay3.MyDeviceInfo());
+            //}
 
 
             MessageBox.Show("Save Complete", "Notification");
-            _inFileWriter.Close();
+            //_inFileWriter.Close();
 
         }
 
@@ -466,10 +450,28 @@ namespace MyМushroomController
             return true;
         }
 
-        private void SettingBT_Click(object sender, EventArgs e)
+        private void CloseComTB_Click(object sender, EventArgs e)
         {
-            SettingsForm MySetting = new SettingsForm(this);
-            MySetting.Show();
+            if (_myserialPort != null)
+            {
+                try
+                {
+                    _myserialPort.Close();
+                    IndicatorCOMBT.Visible = false;
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "Error");
+                }
+               
+            }
+            
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            var list = SQLiteHelper.Gettabel();
         }
     }
 }
