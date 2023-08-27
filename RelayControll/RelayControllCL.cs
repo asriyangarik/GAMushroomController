@@ -10,8 +10,6 @@ namespace RelayControll
     {
         int _deviceHandle = 0;
         static List<usb_relay_device_info> devicesInfos;
-
-
         private usb_relay_device_info _mydevice;
 
         public string MyDeviceInfo()
@@ -21,10 +19,10 @@ namespace RelayControll
                
                 return _mydevice.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                return ex.Message;
+                return null;
             }
 
 
@@ -80,7 +78,6 @@ namespace RelayControll
             }
 
         }
-
 
         public void MyDeviceDisConnect()
         {
