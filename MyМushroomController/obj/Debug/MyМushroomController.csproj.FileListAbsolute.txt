@@ -30,3 +30,67 @@ C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.xml
 C:\Users\User\Desktop\VisualServise\MyМushroomController\MyМushroomController\bin\Debug\SQLite\MushroomDB.sqlite
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\MyМushroomController.exe.config
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\MyМushroomController.exe
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\MyМushroomController.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\DynamicData.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\RelayControll.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\Splat.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Reactive.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\RelayControll.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\DynamicData.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\Splat.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Reactive.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.MyController.resources
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.Properties.Resources.resources
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.GenerateResource.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.CopyComplete
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.exe
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.Sections.resources
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\MyМushroomController.exe.config
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\MyМushroomController.exe
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\MyМushroomController.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\DynamicData.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\RelayControll.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\Splat.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Reactive.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\RelayControll.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\DynamicData.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\Splat.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Data.SQLite.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Reactive.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.MyController.resources
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.Properties.Resources.resources
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.Sections.resources
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.GenerateResource.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.CopyComplete
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.exe
+C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.pdb
