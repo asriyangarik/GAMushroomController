@@ -94,3 +94,4 @@ C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushr
 C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.csproj.CopyComplete
 C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.exe
 C:\Users\User\Desktop\VisualServise\MyМushroomController — копия\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.pdb
+C:\Users\User\Desktop\VisualServise\MyМushroomController\GAMushroomController\MyМushroomController\obj\Debug\MyМushroomController.ParentFormGLOBAL.resources
