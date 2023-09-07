@@ -55,6 +55,7 @@ namespace MyМushroomController.DAL
                 MySQLConnector().Open();
 
                 var command = new SQLiteCommand(@"SELECT Create_Date,
+                                                         Sections_Count,
                                                          COM_Port1,
                                                          COM_BaudRate1,
                                                          COM_Port2,
@@ -81,18 +82,19 @@ namespace MyМushroomController.DAL
                 while (rdr.Read())
                 {
                     Srow.Create_Date = rdr.GetString(0);
-                    Srow.COM_Port1 = rdr.GetString(1);
-                    Srow.COM_BaudRate1 = rdr.GetInt16(2);
-                    Srow.COM_Port2 = rdr.GetString(3);
-                    Srow.COM_BaudRate2 = rdr.GetInt16(4);
-                    Srow.COM_Port3 = rdr.GetString(5);
-                    Srow.COM_BaudRate3 = rdr.GetInt16(6);
-                    Srow.COM_Port4 = rdr.GetString(7);
-                    Srow.COM_BaudRate4 = rdr.GetInt16(8);
-                    Srow.Relay_1 = rdr.GetString(9);
-                    Srow.Relay_2 = rdr.GetString(10);
-                    Srow.Relay_3 = rdr.GetString(11);
-                    Srow.Relay_4 = rdr.GetString(12);
+                    Srow.Sections_Count = rdr.GetInt16(1);
+                    Srow.COM_Port1 = rdr.GetString(2);
+                    Srow.COM_BaudRate1 = rdr.GetInt16(3);
+                    Srow.COM_Port2 = rdr.GetString(4);
+                    Srow.COM_BaudRate2 = rdr.GetInt16(5);
+                    Srow.COM_Port3 = rdr.GetString(6);
+                    Srow.COM_BaudRate3 = rdr.GetInt16(7);
+                    Srow.COM_Port4 = rdr.GetString(8);
+                    Srow.COM_BaudRate4 = rdr.GetInt16(9);
+                    Srow.Relay_1 = rdr.GetString(10);
+                    Srow.Relay_2 = rdr.GetString(11);
+                    Srow.Relay_3 = rdr.GetString(12);
+                    Srow.Relay_4 = rdr.GetString(13);
                 }
                 MySQLConnector().Close();
                 return Srow;
@@ -118,6 +120,9 @@ namespace MyМushroomController.DAL
                 try
                 {
                     MySQLConnector().Open();
+
+                    int _SectionsCount = 0;
+
                     string relay1 = "";
                     string relay2 = "";
                     string relay3 = "";
@@ -132,6 +137,8 @@ namespace MyМushroomController.DAL
                     int serialPort_BaudRate4 = 0;
 
                     var dateTime = DateTime.Now;
+                    _SectionsCount = controllerItems.SectionsCount;
+
 
                     if (controllerItems._myserialPort1!=null)
                     {
@@ -184,6 +191,7 @@ namespace MyМushroomController.DAL
 
                     string insertCommandString = $@"INSERT INTO ControllerSetings (
                          Create_Date,
+                         Sections_Count, 
                          COM_Port1,
                          COM_BaudRate1,
                          COM_Port2,
@@ -199,6 +207,7 @@ namespace MyМushroomController.DAL
                      )
                      VALUES (
                          '{dateTime}',
+                         '{_SectionsCount}',
                          '{SerialPort_name1}',
                          '{serialPort_BaudRate1}',
                          '{SerialPort_name2}',
@@ -253,6 +262,7 @@ namespace MyМushroomController.DAL
                 ///////////////1rst table
                 
                 SQLiteCommand createTables = new SQLiteCommand(@"CREATE TABLE ControllerSetings(Create_Date DATETIME,
+                                                                                              Sections_Count bit,
                                                                                               COM_Port1 VARCHAR(10),
                                                                                               COM_BaudRate1 INTEGER,
                                                                                               COM_Port2 VARCHAR(10),
@@ -374,6 +384,11 @@ namespace MyМushroomController.DAL
     internal class SQLSettingsRow
     {
         public string Create_Date
+        {
+            get;
+            set;
+        }
+        public int Sections_Count
         {
             get;
             set;

@@ -80,6 +80,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParentFormGLOBAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentFormGLOBAL.Designer.cs">
+      <DependentUpon>ParentFormGLOBAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sections.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MyController.resx">
       <DependentUpon>MyController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentFormGLOBAL.resx">
+      <DependentUpon>ParentFormGLOBAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

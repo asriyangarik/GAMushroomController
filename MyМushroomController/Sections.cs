@@ -1,15 +1,59 @@
-﻿using System.Windows.Forms;
+﻿using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MyМushroomController
 {
-    public partial class Sections : Form
+    public partial class Sections : ParentFormGLOBAL
     {
-        // ref MyController parentForm1;
+        MyController _myController;
 
-        public Sections(MyController parentForm)
+        public Sections()
         {
             InitializeComponent();
-            //parentForm1 = ref parentForm;
+        }
+
+        public Sections(MyController myController)
+        {
+            InitializeComponent();
+            _myController = myController;
+
+
+            if (_myController.SectionsCount == -1 ) { return; }
+            Sections1RB.Checked = _myController.SectionsCount == 1;
+            Sections2RB.Checked = _myController.SectionsCount == 2;
+            Sections3RB.Checked = _myController.SectionsCount == 3;
+            Sections4RB.Checked = _myController.SectionsCount == 4;
+
+        }
+
+        private void Sections_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            Task sectionsSet = new Task(() =>
+            {
+                if (Sections1RB.Checked)
+                {
+                    _myController.SectionsCount = 1;
+                }
+                else if (Sections2RB.Checked)
+                {
+                    _myController.SectionsCount = 2;
+                }
+                else if (Sections3RB.Checked)
+                {
+                    _myController.SectionsCount = 3;
+                }
+                else if (Sections4RB.Checked)
+                {
+                    _myController.SectionsCount = 4;
+                }
+            });
+            sectionsSet.Start();
+            sectionsSet.Wait();
+
+
+            _myController.EnableSections();
+          
         }
     }
 }

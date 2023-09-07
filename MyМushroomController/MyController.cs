@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace MyМushroomController
 {
-    public partial class MyController : Form
+    public partial class MyController : ParentFormGLOBAL
     {
         SQLSettingsRow Mysetting;
+
+        internal int SectionsCount = -1;
+
         internal SerialPort _myserialPort1;
         internal SerialPort _myserialPort2;
         internal SerialPort _myserialPort3;
         internal SerialPort _myserialPort4;
-
-        internal Int16 SectionsCount;
 
         internal RelayControllCL _myRelay1;
         internal RelayControllCL _myRelay2;
@@ -41,12 +42,15 @@ namespace MyМushroomController
                 CrateDBTB.Enabled = false;
                 SaveSetTB.Enabled = true;
                 GetSetting();
+
             }
             else
             {
                 CrateDBTB.Enabled = true;
                 SaveSetTB.Enabled = false;
             }
+
+            DisableSections();
 
         }
 
@@ -56,6 +60,10 @@ namespace MyМushroomController
 
             if (Mysetting != null) 
             {
+                try
+                {
+
+               
                 MyComPorts1CB.Text = Mysetting.COM_Port1;
                 COMBaudRate1CB.Text = Mysetting.COM_BaudRate1.ToString();
                 MyComPorts2CB.Text = Mysetting.COM_Port2;
@@ -64,6 +72,10 @@ namespace MyМushroomController
                 COMBaudRate3CB.Text = Mysetting.COM_BaudRate3.ToString();
                 MyComPorts4CB.Text = Mysetting.COM_Port4;
                 COMBaudRate4CB.Text = Mysetting.COM_BaudRate4.ToString();
+
+                SectionsCount = Mysetting.Sections_Count;
+
+
 
                 if (Mysetting.Relay_1 != "")
                 {
@@ -80,6 +92,12 @@ namespace MyМushroomController
                 if (Mysetting.Relay_4 != "")
                 {
                     RelayList4CB.SelectedIndex = 3;
+                }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Have a problem  " + ex.Message , "Error");
                 }
 
             }
@@ -133,16 +151,24 @@ namespace MyМushroomController
             COMBaudRate4CB.Items.Add("115200");
             COMBaudRate4CB.Items.Add("128000");
 
-
-            var myReleys = RelayControllCL.MyDeviceNames();
-            foreach (var reley in myReleys)
+            try
             {
-                RelayList1CB.Items.Add(reley);
-                RelayList2CB.Items.Add(reley);
-                RelayList3CB.Items.Add(reley);
-                RelayList4CB.Items.Add(reley);
+                var myReleys = RelayControllCL.MyDeviceNames();
+                foreach (var reley in myReleys)
+                {
+                    RelayList1CB.Items.Add(reley);
+                    RelayList2CB.Items.Add(reley);
+                    RelayList3CB.Items.Add(reley);
+                    RelayList4CB.Items.Add(reley);
+                }
             }
-            
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Relays unable " + ex.Message, "Error");
+            }
+           
+
 
         }
 
@@ -932,6 +958,8 @@ namespace MyМushroomController
         {
             var sectionForm = new Sections(this);
             sectionForm.Show();
+
+            
         }
 
         private void DeleteSetingsTB_Click(object sender, EventArgs e)
@@ -944,5 +972,160 @@ namespace MyМushroomController
            
 
         }
+
+        private void DisableSections()
+        {
+            tabControl1.Enabled = false; 
+            
+        }
+
+        internal void EnableSections()
+        {
+            tabControl1.Enabled = true;
+
+            if (SectionsCount == 1)
+            {
+                COMGB1.Enabled = true;
+                COMGB2.Enabled = false;
+                COMGB3.Enabled = false;
+                COMGB4.Enabled = false;
+
+                COMGB1.Visible = true;
+                COMGB2.Visible = false;
+                COMGB3.Visible = false;
+                COMGB4.Visible = false;
+
+                RelayGB1.Enabled = true;
+                RelayGB2.Enabled = false;
+                RelayGB3.Enabled = false;
+                RelayGB4.Enabled = false;
+
+                RelayGB1.Visible = true;
+                RelayGB2.Visible = false;
+                RelayGB3.Visible = false;
+                RelayGB4.Visible = false;
+
+                SensorGB1.Enabled = true;
+                SensorGB2.Enabled = false;
+                SensorGB3.Enabled = false;
+                SensorGB4.Enabled = false;
+
+                SensorGB1.Visible = true;
+                SensorGB2.Visible = false;
+                SensorGB3.Visible = false;
+                SensorGB4.Visible = false;
+
+
+
+
+            }
+            else if (SectionsCount == 2)
+            {
+                COMGB1.Enabled = true;
+                COMGB2.Enabled = true;
+                COMGB3.Enabled = false;
+                COMGB4.Enabled = false;
+
+                COMGB1.Visible = true;
+                COMGB2.Visible = true;
+                COMGB3.Visible = false;
+                COMGB4.Visible = false;
+
+
+                RelayGB1.Enabled = true;
+                RelayGB2.Enabled = true;
+                RelayGB3.Enabled = false;
+                RelayGB4.Enabled = false;
+
+                RelayGB1.Visible = true;
+                RelayGB2.Visible = true;
+                RelayGB3.Visible = false;
+                RelayGB4.Visible = false;
+
+                SensorGB1.Enabled = true;
+                SensorGB2.Enabled = true;
+                SensorGB3.Enabled = false;
+                SensorGB4.Enabled = false;
+
+                SensorGB1.Visible = true;
+                SensorGB2.Visible = true;
+                SensorGB3.Visible = false;
+                SensorGB4.Visible = false;
+
+            }
+            else if (SectionsCount == 3)
+            {
+                COMGB1.Enabled = true;
+                COMGB2.Enabled = true;
+                COMGB3.Enabled = true;
+                COMGB4.Enabled = false;
+
+                COMGB1.Visible = true;
+                COMGB2.Visible = true;
+                COMGB3.Visible = true;
+                COMGB4.Visible = false;
+
+                RelayGB1.Enabled = true;
+                RelayGB2.Enabled = true;
+                RelayGB3.Enabled = true;
+                RelayGB4.Enabled = false;
+
+                RelayGB1.Visible = true;
+                RelayGB2.Visible = true;
+                RelayGB3.Visible = true;
+                RelayGB4.Visible = false;
+
+                SensorGB1.Enabled = true;
+                SensorGB2.Enabled = true;
+                SensorGB3.Enabled = true;
+                SensorGB4.Enabled = false;
+
+                SensorGB1.Visible = true;
+                SensorGB2.Visible = true;
+                SensorGB3.Visible = true;
+                SensorGB4.Visible = false;
+
+
+            }
+            else if (SectionsCount == 4)
+            {
+                COMGB1.Enabled = true;
+                COMGB2.Enabled = true;
+                COMGB3.Enabled = true;
+                COMGB4.Enabled = true;
+
+                COMGB1.Visible = true;
+                COMGB2.Visible = true;
+                COMGB3.Visible = true;
+                COMGB4.Visible = true;
+
+                RelayGB1.Enabled = true;
+                RelayGB2.Enabled = true;
+                RelayGB3.Enabled = true;
+                RelayGB4.Enabled = true;
+
+                RelayGB1.Visible = true;
+                RelayGB2.Visible = true;
+                RelayGB3.Visible = true;
+                RelayGB4.Visible = true;
+
+                SensorGB1.Enabled = true;
+                SensorGB2.Enabled = true;
+                SensorGB3.Enabled = true;
+                SensorGB4.Enabled = true;
+
+                SensorGB1.Visible = true;
+                SensorGB2.Visible = true;
+                SensorGB3.Visible = true;
+                SensorGB4.Visible = true;
+            }
+        }
+
+        private void MyController_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
+    
 }
